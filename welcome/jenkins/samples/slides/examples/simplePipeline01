@@ -117,12 +117,13 @@ pipeline {
                 }
             }
         }
-    }
-        stage('logs gathering') {
+        stage('Logs Gatherings') {
             steps {
                 archiveArtifacts artifacts: '/welcome/app/flask-volt-dashboard', allowEmptyArchive: true
             }
-        }
+        }        
+    }
+
 
     post {
         always {
