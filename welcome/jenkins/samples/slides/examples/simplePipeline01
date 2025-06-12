@@ -119,7 +119,9 @@ pipeline {
         }
         stage('Logs Gatherings') {
             steps {
-                archiveArtifacts artifacts: '/welcome/app/flask-volt-dashboard', allowEmptyArchive: true
+                dir("${PROJECT_HOME}") {
+                archiveArtifacts artifacts: 'flask_app.log', allowEmptyArchive: true
+                }
             }
         }        
     }
