@@ -30,6 +30,15 @@ pipeline {
                }
            }
        }
+        stage('Deploy_prod') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo 'Deploying to production...'
+                // Deployment steps
+            }
+        }    
    }
 
    post {
